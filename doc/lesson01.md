@@ -39,10 +39,10 @@
 
 Я участвовал в одном  проекте, где `final` был обязательным (в сеттингах IDEA галочка стояла). Но это скорее исключение, чем правило в проектах java (в Java 8 вообще ввели эффективный final, те по факту). Во всех новомодных языках переменные final по умолчанию, а в java нужно помнить и везде добавлять, утомительно. Но если приучитесь - хуже не будет. Я обычно ставлю там, где важно по смыслу (если не забываю).
 
-### ![video](https://drive.google.com/file/d/1tYx0KC1NSnB8GxcgYa8HGrr75oAe23Bh">HW0 Optional 2: реализация в один проход и одной строкой Stream API</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/file/d/1tYx0KC1NSnB8GxcgYa8HGrr75oAe23Bh">HW0 Optional 2: реализация в один проход и одной строкой Stream API</a>
 
 #### Apply 1_opt_3_HW0_opt2.patch
-- [VK: Java программист: от новичка до профессионала](https://vk.com/javawebinar)
+- [DevEcosystem from JetBrains](https://www.jetbrains.com/lp/devecosystem-2020/java/)
 - Дополнительно:
   - [Первое занятие MasterJava: многопоточность](https://github.com/JavaOPs/masterjava)
   - [Обзор java.util.concurrent.*](https://habr.com/ru/company/luxoft/blog/157273/)
@@ -83,7 +83,7 @@
 > - Обновил зависимость до Servlet 4.0. Установите себе [Tomcat 9.x](https://tomcat.apache.org/download-90.cgi)
 > - Устанавливать Tomcat лучше простым скачиванием архива `xxx.zip` (например для Windows `apache-tomcat-9.0.35-windows-x64.zip`) и копированием из него в **каталог без пробелов и русских букв** (пример `С:\java\apache-tomcat-9.0.35`)
 
-**ВНИМАНИЕ! далее патчи идут после `1_1_HW0_streams` в ветку `master`**
+#### ВНИМАНИЕ! далее патчи идут после `1_1_HW0_streams` в ветку `master`**
 
 #### Apply 1_2_switch_to_war.patch
 > - Обновил сервлеты до версии 4.0 (Tomcat 9 использует это API, хотя для нас не принципиально, т.к. мы никакие <a href="https://ru.wikipedia.org/wiki/Сервлет_(Java)">фичи 3.x и 4.x Servlet API</a> не используем)
@@ -108,11 +108,11 @@
 ```
 <user username="tomcat" password="tomcat" roles="tomcat,manager-gui,admin-gui"/>
 ```
-- Если проблема с Tomcat debug и работает Dr.Web- нужно его отключить, либо добавить в исключения путь к  `.IntelliJIdea2019.3/`
+- Если проблема с Tomcat debug и работает Dr.Web- нужно его отключить, либо добавить в исключения путь к  `.IntelliJIdeaXXX/`
 - Наше приложение: [http://localhost:8080/topjava](http://localhost:8080/topjava)
 - Наш сервлет:     [http://localhost:8080/topjava/users](http://localhost:8080/topjava/users)
 - [Настройки Remote Debug в новой IDEA](https://github.com/JavaOPs/topjava/wiki/IDEA#remote-debug-в-новой-idea)
-- Справочник:
+- Дополнительно:
   - [HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP)
   - <a href="http://info.javarush.ru/idea_help/2014/01/22/Руководство-пользователя-IntelliJ-IDEA-Отладчик-.html">Отладчик IntelliJ IDEA</a>
   - <a href="https://www.youtube.com/watch?v=tN8K1y-HSws&list=PLkKunJj_bZefB1_hhS68092rbF4HFtKjW&index=14">Yakov Fain: Intro to Java EE. Glassfish. Servlets (по-русски)</a>
@@ -160,7 +160,7 @@
 JSF и JSP- разные ниши и задачи.
 JSP- шаблонизатор, JSF - МVС фреймворк. Из моего опыта- с JSP сталкивался в 60% проектов. Его прямая замена: http://www.thymeleaf.org (в Spring-Boot по умолчанию), но в уже запущенных проектах встречается достаточно редко. JSP не умирает, потому что просто и дешево. Кроме того включается в большинство веб-контейнеров (в Tomcat его реализация Jasper)
 
-JSF- sun-овский еще фреймворк, с которым я ни разу не сталкивался и особого желания нет. Вот он как раз, по моему мнению, активно замещается хотя бы javascript фреймворками (angular, react, vue).
+JSF- sun-овский еще фреймворк, с которым я ни разу не сталкивался и особого желания нет. Вот он как раз, по моему мнению, активно замещается хотя бы javascript фреймворками (angular, react, vue.js).
 
 > А зачем мы использовали logback? Почему SLF4J нас не устроило? Почему реализация логирования не log4j?
 
@@ -272,8 +272,8 @@ protected void doPost(HttpServletRequest request, ...) {
 
 ----------------------------
 ### Итоги занятия после выполнения ДЗ: 
-Мы создали CRUD веб-приложение для управления едой (создание-чтение-обновление-удаление) с использованием сервлетов и логированием. Пока в памяти, и пока еда никому не принадлежит.     
-Пример выполнения ДЗ (не надо сложного интерфейса, Bootstrap будет позже):
+Мы создали CRUD веб-приложение для управления едой (создание-чтение-обновление-удаление) с использованием сервлетов и логированием. Пока в памяти, и пока еда никому не принадлежит.
+Пример выполнения ДЗ (не надо сложного интерфейса, Bootstrap css будем проходить на 8-м занятии):
 
 ![image](https://user-images.githubusercontent.com/13649199/94701494-6100c800-0345-11eb-9907-2a0099305710.png)
 ![image](https://user-images.githubusercontent.com/13649199/94701688-9a393800-0345-11eb-9c2d-dd53ba55724c.png)
