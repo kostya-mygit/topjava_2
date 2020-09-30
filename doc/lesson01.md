@@ -23,7 +23,7 @@
 - [Презентация Java 8](https://docs.google.com/presentation/d/1oltLkHK60FqIdsXjUdm4pPLSeC6KpNYjDsM0ips-qBw)
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=1K0kan7TEUeOAe_qcdCtRF9rsqD-NwFZ7">Работа с git в IDEA. Реализация через цикл.</a>
-### ВНИМАНИЕ! Патчей `1_opt_2_cycles_HW0` и `1_opt_3_opt2_HW0` не будет в проекте! Делаем в отдельной ветке (у меня `MealsUtil_opt`). Это варианты решений, которые не идут в `master`.**
+### ВНИМАНИЕ! Патчей `1_opt_2_cycles_HW0` и `1_opt_3_opt2_HW0` не будет в проекте! Делаем в отдельной ветке (у меня `MealsUtil_opt`). Это варианты решений, которые не идут в `master`
 
 ![image](https://user-images.githubusercontent.com/13649199/83656711-8b758b00-a5c8-11ea-9de4-c2ade77d4598.png)
 
@@ -83,7 +83,7 @@
 > - Обновил зависимость до Servlet 4.0. Установите себе [Tomcat 9.x](https://tomcat.apache.org/download-90.cgi)
 > - Устанавливать Tomcat лучше простым скачиванием архива `xxx.zip` (например для Windows `apache-tomcat-9.0.35-windows-x64.zip`) и копированием из него в **каталог без пробелов и русских букв** (пример `С:\java\apache-tomcat-9.0.35`)
 
-### ВНИМАНИЕ! далее патчи идут после `1_1_HW0_streams` в ветку `master`**
+### ВНИМАНИЕ! далее патчи идут в ветку `master` после `1_1_HW0_streams` 
 
 #### Apply 1_2_switch_to_war.patch
 > - Обновил сервлеты до версии 4.0 (Tomcat 9 использует это API, хотя для нас не принципиально, т.к. мы никакие <a href="https://ru.wikipedia.org/wiki/Сервлет_(Java)">фичи 3.x и 4.x Servlet API</a> не используем)
