@@ -14,7 +14,7 @@
 > - Переименовал `mealList.jsp` в `meals.jsp`
 > - Изменения в `MealsUtil`:
 >    - Сделал константу `List<Meal> meals`. [Правило именования констант, которые не "deeply immutable"](https://google.github.io/styleguide/javaguide.html#s5.2.4-constant-names)
->    - Для фильтрации по времени и без нее в метод `filterByPredicate` передаю реализацию `Predicate` (см. паттерн [Стратегия](https://refactoring.guru/ru/design-patterns/strategy))
+>    - Для фильтрации по времени и без нее в метод `filterByPredicate` передаю реализацию `Predicate`, см. паттерн [Стратегия](https://refactoring.guru/ru/design-patterns/strategy) и, если непонятно, [картинку](https://user-images.githubusercontent.com/13649199/95467365-093a1080-0986-11eb-8177-0985456d857a.png)
 > - Форматирование даты сделал на основе <a href="http://stackoverflow.com/questions/35606551/jstl-localdatetime-format#35607225"> Custom EL function</a>
 >    - [Create a custom Function for JSTL через tag library descriptor (TLD)](http://findnerd.com/list/view/How-to-create-a-custom-Function-for-JSTL/2869/)
 > - Добавил еще один способ вывести `dateTime` через стандартную JSTL функцию `replace`  (префикс `fn` в шапке также надо поменять)
