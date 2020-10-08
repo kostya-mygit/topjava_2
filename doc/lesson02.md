@@ -150,7 +150,7 @@
 #### Дополнительно видео по Spring
    - [Юрий Ткач: Spring Framework - The Basics](https://www.youtube.com/playlist?list=PL6jg6AGdCNaWF-sUH2QDudBRXo54zuN1t)
    - [Java Brains: Spring Framework](https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7)
-   - [Тимур Батыршинов: Введение в Spring](https://www.youtube.com/watch?v=MnUThz43viE&list=PL8X2nqRlWfaax2odRVXpnYXwWEF4d4s-J)
+   - [Тимур Батыршинов: Spring Core - основы фреймворка, ядро](https://www.youtube.com/watch?v=CfHDr-19WWY&list=PL8X2nqRlWfaYYP1-qXjdPKE7bXYkl6aL4)
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 > Что такое схема в spring-app.xml xsi:schemaLocation и зачем она нужна
