@@ -12,7 +12,6 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. [Реализация репозиториев](https://drive.google.com/file/d/1hZay5jV-mVEByMnDveZ36jUAY0I3WChT)
 
 #### Apply 3_01_HW2_repositories.patch
- - [Оптимизация анонимных классов](http://stackoverflow.com/questions/19718353/548473) не требуется! Почитайте комменты от Holger: *Java 8 relieves us from the need to think about such things at all*.
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [Фильтрация в репозитории](https://drive.google.com/file/d/1s1tAsopU60gRvMaL53TP9EjS1gap99s3)
 Метод `MealRepository.getBetweenHalfOpen` мы используем в следующем патче для фильтрации по целым дням.  
@@ -63,7 +62,7 @@
 ## Занятие 3:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFOU8wWlpPVE05STA">Коротко о жизненном цикле Spring контекста.</a>
 #### Apply 3_08_bean_life_cycle.patch
-> На JDK 15 перейдем в 5 занятии. Если у вас JDK больше 8, [добавьте в pom `javax.annotation-api`](https://stackoverflow.com/a/46502132/548473)
+> **Если у вас JDK больше 8, [добавьте в pom `javax.annotation-api`](https://stackoverflow.com/a/46502132/548473). На JDK 15 перейдем в 5 занятии.** 
 
 -  <a href="http://habrahabr.ru/post/222579/">Spring изнутри. Этапы инициализации контекста.</a>
 -  Ресурсы:
