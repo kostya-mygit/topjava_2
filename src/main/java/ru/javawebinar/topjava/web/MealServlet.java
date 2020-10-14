@@ -2,10 +2,8 @@ package ru.javawebinar.topjava.web;
 
 import org.slf4j.Logger;
 import ru.javawebinar.topjava.model.Meal;
-import ru.javawebinar.topjava.model.MealTo;
 import ru.javawebinar.topjava.storage.MealStorage;
 import ru.javawebinar.topjava.storage.MealStorageInMemory;
-import ru.javawebinar.topjava.util.MealsUtil;
 import ru.javawebinar.topjava.util.TimeUtil;
 
 import javax.servlet.ServletException;
@@ -15,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.List;
+import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
 import static org.slf4j.LoggerFactory.getLogger;
 import static ru.javawebinar.topjava.util.MealsUtil.*;
@@ -40,12 +39,11 @@ public class MealServlet extends HttpServlet {
 
         Meal meal;
         if (idFromRequest.isEmpty()) {
-            meal = new Meal(MealsUtil.incrementAndGetCounter(), dateTime, description, calories);
+            meal = new Meal(dateTime, description, calories);
         } else {
-            Integer id = Integer.parseInt(idFromRequest);
-            meal = new Meal(id, dateTime, description, calories);
+            meal = new Meal(getId(request), dateTime, description, calories);
         }
-        log.debug("save {}", meal);
+        log.debug(meal.isNew() ? "add {}" : "update {}", meal);
         mealStorage.save(meal);
 
         response.sendRedirect("meals");
@@ -57,42 +55,38 @@ public class MealServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
 
-        List<MealTo> mealsTo = filteredByStreams(MealsUtil.getMeals(), LocalTime.MIN, LocalTime.MAX, 2000);
-
         String action = request.getParameter("action");
         if (action == null) {
-            request.setAttribute("mealsTo", mealsTo);
-            log.debug("forward to meals");
-            request.getRequestDispatcher("meals.jsp").forward(request, response);
+            log.debug("getAll");
+            request.setAttribute("mealsTo", filteredByStreams(mealStorage.getAll(), LocalTime.MIN, LocalTime.MAX, DEFAULT_CALORIES_PER_DAY));
+            request.getRequestDispatcher("/meals.jsp").forward(request, response);
             return;
-        }
-
-        String idFromRequest = request.getParameter("id");
-        Integer id = null;
-        if (idFromRequest != null) {
-            id = Integer.parseInt(idFromRequest);
         }
 
         Meal meal = null;
         switch (action) {
             case "delete":
+                int id = getId(request);
                 log.debug("delete meal with id={}", id);
                 mealStorage.delete(id);
                 response.sendRedirect("meals");
                 return;
             case "add":
-                log.debug("add new meal");
-                meal = new Meal(null, LocalDateTime.now(), "Description", 100);
+                meal = new Meal(LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES), "", 100);
                 break;
             case "edit":
-                log.debug("edit meal with id={}", id);
-                meal = mealStorage.get(id);
+                meal = mealStorage.get(getId(request));
                 break;
             default:
                 throw new IllegalArgumentException("Action " + action + " is illegal");
         }
         request.setAttribute("meal", meal);
         request.setAttribute("action", action);
-        request.getRequestDispatcher("edit.jsp").forward(request, response);
+        request.getRequestDispatcher("/edit.jsp").forward(request, response);
+    }
+
+    private int getId(HttpServletRequest request) {
+        String idFromRequest = Objects.requireNonNull(request.getParameter("id"));
+        return Integer.parseInt(idFromRequest);
     }
 }
