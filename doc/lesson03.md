@@ -185,6 +185,10 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
 **Приложение перестало работать, тк. для репозитория мы используем заглушку `JdbcMealRepository`**
  
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
+> Что такое REST?
+
+Коротко посмотрите тут: [понимание REST](http://spring-projects.ru/understanding/rest/). Более подробно мы будет разбирать этот архитектурный стиль API на 7м занятии.
+ 
 > Какая разница между @BeforeClass and @Before? 
 
 `@BeforeClass` выполняется один раз после загрузки класса (поэтому метод может быть только статический), `@Before` перед каждым тестом.
