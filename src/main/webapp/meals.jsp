@@ -4,13 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Users</title>
+    <title>Meals</title>
 </head>
 <body>
 <h3><a href="index.html">Home</a></h3>
 <hr>
 <h2>Meals</h2>
 
+<p><a href="meals?action=add">Add Meal</a></p>
 <table>
     <tr>
         <th>Date</th>
@@ -25,8 +26,8 @@
             <td>${mealTo.date}&nbsp;${mealTo.time}</td>
             <td>${mealTo.description}</td>
             <td>${mealTo.calories}</td>
-            <td></td>
-            <td></td>
+            <td><a href="meals?id=${mealTo.id}&action=edit">Update</a></td>
+            <td><a href="meals?id=${mealTo.id}&action=delete">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
