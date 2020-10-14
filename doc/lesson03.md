@@ -184,15 +184,6 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
 #### Apply 3_15_fix_servlet.patch
 **Приложение перестало работать, тк. для репозитория мы используем заглушку `JdbcMealRepository`**
  
-### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 13. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNDlOQVpOWF82OTA">Ответы на Ваши вопросы</a>
--  Что такое REST? <a href="https://medium.com/@mwaysolutions/10-best-practices-for-better-restful-api-cbe81b06f291">10 Best Practices for Better RESTful API</a>
--  Зачем нужна сортировка еды?
--  Можно ли обойтись без `MapSqlParameterSource`?
--  Как происходит работа с DB в тестах?
--  Как реализовывать RowMapper?
--  Мои комментарии: решения проблем разработчиком.
--  Нужен ли разработчику JavaScript?
-
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 > Какая разница между @BeforeClass and @Before? 
 
