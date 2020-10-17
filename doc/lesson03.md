@@ -143,13 +143,16 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
 -  <a href="http://habrahabr.ru/company/JetBrains/blog/204064/">Настройка Database в IDEA</a> и запуск SQL.
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 10. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFMGNWUXhaVzdlU0k">Скрипты инициализации базы. Spring Jdbc Template.</a>
-
 #### Apply 3_12_db_implementation.patch
 > - в `JdbcUserRepository` 
 >   - в `getByEmail()` заменил `queryForObject()` на `query()`. Загляните в код: `queryForObject` бросает `EmptyResultDataAccessException` вместо нужного нам `null`.
 >   - в `save()` добавил проверку на несуществующей в базе `User.id`
 > - в классе `JdbcTemplate` есть настройки (`queryTimeout/ skipResultsProcessing/ skipUndeclaredResults`) уровня приложения (если они будут менятся, то, скорее всего, везде в приложении).
   Мы можем дополнительно сконфигурировать его в `spring-db.xml` и использовать в конструкторах `NamedParameterJdbcTemplate` и в `SimpleJdbcInsert` вместо `dataSource`.
+
+Если IDEA не видит таблицы/поля, попробуйте поднять флажок `Introspect using JDBC metadata` (у меня все без него работает):
+
+![image](https://user-images.githubusercontent.com/13649199/96332049-9f4af680-106a-11eb-996e-61352d14495a.png)
 
 ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) **Вопрос: почему отображение еды не работает?**
 
