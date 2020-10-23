@@ -5,8 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.repository.MealRepository;
+import ru.javawebinar.topjava.util.DateTimeUtil;
 import ru.javawebinar.topjava.util.MealsUtil;
 
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -57,6 +59,14 @@ public class InMemoryMealRepository implements MealRepository {
         return repository.values().stream()
                 .filter(m -> m.getUserId() == userId)
                 .sorted(Comparator.comparing(Meal::getDateTime).reversed())
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Meal> getBetweenHalfOpen(LocalDateTime startDateTime, LocalDateTime endDateTime, int userId) {
+        List<Meal> meals = getAll(userId);
+        return meals.stream()
+                .filter(m -> DateTimeUtil.isBetweenHalfOpen(m.getDateTime(), startDateTime, endDateTime))
                 .collect(Collectors.toList());
     }
 }

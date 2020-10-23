@@ -23,14 +23,15 @@
     <h2>Meals</h2>
     <div>
         <form action="meals">
+            <input type="hidden" name="action" value="filter">
             <label>startDate</label>
-            <input type="date" name="startDate" value="${startDate}">
+            <input type="date" name="startDate" value="${param.startDate}">
             <label>endDate</label>
-            <input type="date" name="endDate" value="${endDate}">
+            <input type="date" name="endDate" value="${param.endDate}">
             <label>startTime</label>
-            <input type="time" name="startTime" value="${startTime}">
+            <input type="time" name="startTime" value="${param.startTime}">
             <label>endTime</label>
-            <input type="time" name="endTime" value="${endTime}">
+            <input type="time" name="endTime" value="${param.endTime}">
             <input type="submit"/>
         </form>
     </div>
