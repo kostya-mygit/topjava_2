@@ -21,6 +21,19 @@
     <h3><a href="index.html">Home</a></h3>
     <hr/>
     <h2>Meals</h2>
+    <div>
+        <form action="meals">
+            <label>startDate</label>
+            <input type="date" name="startDate" value="${startDate}">
+            <label>endDate</label>
+            <input type="date" name="endDate" value="${endDate}">
+            <label>startTime</label>
+            <input type="time" name="startTime" value="${startTime}">
+            <label>endTime</label>
+            <input type="time" name="endTime" value="${endTime}">
+            <input type="submit"/>
+        </form>
+    </div>
     <a href="meals?action=create">Add Meal</a>
     <br><br>
     <table border="1" cellpadding="8" cellspacing="0">
