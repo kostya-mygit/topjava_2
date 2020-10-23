@@ -124,6 +124,7 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
 - Основы:
   - <a href="https://ru.wikipedia.org/wiki/Реляционная_СУБД">Реляционная СУБД</a>
   - <a href="http://habrahabr.ru/post/103021/">Реляционные базы</a>
+  - [Руководство по проектированию реляционных баз данных](https://habr.com/ru/post/193136/)
   - <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Уроки по JDBC</a>
   - <a href="http://postgresguide.com/">Postgres Guide</a>
   - <a href="http://www.postgresqltutorial.com">PostgreSQL Tutorial</a>
