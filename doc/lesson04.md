@@ -105,7 +105,7 @@
     -  <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#expressions">Spring expressions: выражения в конфигурации</a>
     -  <a href="https://proselyte.net/tutorials/hibernate-tutorial/hibernate-query-language/">HQL</a>/ <a href="http://ru.wikipedia.org/wiki/Java_Persistence_Query_Language">JPQL</a>.
     -  Динамические запросы (которые формируются в коде): <a href="http://www.objectdb.com/java/jpa/query/criteria">JPA Criteria API</a>. <a href="http://www.querydsl.com/">Unified Queries for Java</a>
-    -  <a href="https://bitbucket.org/montanajava/jpaattributeconverters">Using the Java 8 Date Time Classes with JPA</a>
+    -  <a href="https://web.archive.org/web/20170608194049/https://bitbucket.org/montanajava/jpaattributeconverters">Using the Java 8 Date Time Classes with JPA</a>
 
 #### **Apply 4_9_add_named_query_and_transaction.patch**
 > Чтобы посмотреть информацию о транзакциях (открытие/закрытие и пр.), можно выставить в конфигурации logback 
