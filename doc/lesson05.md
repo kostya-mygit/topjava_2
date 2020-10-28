@@ -44,7 +44,7 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [HW4: Meal / JpaMealRepository](https://drive.google.com/file/d/13JJRhLhkn8_C3-xpkyilRxGe_w9_xTF2)
 #### Apply 5_2_HW4.patch
  - При сравнении еды тесты падают, т.к. Hibernate делает ленивую обертку к `user`, и если происходит обращение к любому его полю (кроме id) вне транзакции, бросается `LazyInitializationException`.
-По логике приложения поле `user` в еде не нужно, и мы не будем его отдавать наружу UI. Более того, включать `user` в запрос будет ошибкой: мы запрашиваем данные, которые приложению не требуются.     
+По логике приложения поле `user` в еде не нужно, и мы не будем его отдавать наружу UI. Более того, включать `user` в запрос будет ошибкой: мы запрашиваем данные, которые приложению не требуются.
 В тестах исключаем `user` из сравнения.  
  - [SQL “between” not inclusive](https://stackoverflow.com/questions/16347649/sql-between-not-inclusive/16347680)   
 
@@ -94,9 +94,6 @@
   - <a href="http://stackoverflow.com/questions/8490852/spring-transactional-isolation-propagation">Spring @Transactional - isolation, propagation</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNW0yVWhXcGNPU2M">Профили Maven и Spring</a>
-**ВНИМАНИЕ: пофиксил патчи _5_5_profiles_connection_pool_ и _5_7_spring_data_jpa_. В `spring-db.xml` дублировался `property-placeholder` и `SLF4JBridgeHandler`**  
-[Правильный spring-db.xml](https://raw.githubusercontent.com/JavaWebinar/topjava/55fd0ae9344de485e723197f3785d4f986bf9c0c/src/main/resources/spring/spring-db.xml)
-
 #### Apply 5_5_profiles_connection_pool.patch
 > - `SLF4JBridgeHandler` перенес в профиль `postgres` (если логировать драйвер не нужно, то и он не нужен) 
 > - **Галочка в XML-профиле влияет только на отображение в IDEA и никак не влияет на выполнение кода.**
@@ -159,7 +156,7 @@
    -  <a href="https://blog.42.nl/articles/spring-data-jpa-with-querydsl-repositories-made-easy/">Spring Data JPA with QueryDSL</a>
    -  [SpEL support in Spring Data JPA @Query](https://spring.io/blog/2014/07/15/spel-support-in-spring-data-jpa-query-definitions)
 
-> ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Какой паттерн проектирования применён в классе DataJpaUserRepository (декоратор/адаптер/другой)?:
+> ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Какой паттерн проектирования применён в классе DataJpaUserRepository (декоратор/адаптер/прокси/другой)?:
 
 Вопрос интересный:) Ближе всего к адаптеру, но скорее композиция с делегированием. Мы просто используем для нашей реализации возможности `data-jpa: CrudUserRepository`.
 Делегат интерфейсов не меняет, а прокси похож на делегата, но служит для неявной подмены (часто прямо в рантайм). См. [ПАТТЕРНЫ
