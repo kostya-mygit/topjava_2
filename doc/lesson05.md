@@ -76,7 +76,7 @@
 
 > ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Почему над `AbstractBaseEntity` стоит `@Access(AccessType.FIELD)` ? Почему при запросе `user.id` нам не нужно вытаскивать его из базы?
 
-`AccessType.FIELD` делает доступ в `AbstractBaseEntity` и всех классах-наследниках по полям. При загрузке `Meal` Hibernate на основе поля `meal.user_id` делает ленивую прокcи к `User`, у которой нет ничего, кроме id.
+`AccessType.FIELD` делает доступ в `AbstractBaseEntity` и всех классах-наследниках по полям. При загрузке `Meal` Hibernate на основе поля `meal.user_id` делает ленивую прокси к `User`, у которой нет ничего, кроме id.
 
 #### Apply 5_4_HW4_optional.patch
 - <a href="http://stackoverflow.com/questions/14892125/what-is-the-best-practice-to-determine-the-execution-time-of-the-bussiness-relev#27868954">Stopwatch</a>
@@ -164,7 +164,7 @@
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 8. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFajd2Y2RLQVVJWUU">Spring кэш</a>
 #### Apply 5_8_spring_cache.patch
-> - Сделал миграцию на [Ehcache 3.x, compatibile with javax.cache API (JSR-107)](http://www.ehcache.org/)
+> - Сделал миграцию на [Ehcache 3.x, compatible with javax.cache API (JSR-107)](http://www.ehcache.org/)
 >   - [Spring 4+ with Ehcache 3 – how to](https://imhoratiu.wordpress.com/2017/01/26/spring-4-with-ehcache-3-how-to/)
 >   - [Новая XML конфигурация](http://www.ehcache.org/documentation/3.4/xml.html)
 >   - [Supplement JSR-107’s configurations](http://www.ehcache.org/documentation/3.1/107.html#supplement-jsr-107-configurations)
