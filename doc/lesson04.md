@@ -6,7 +6,7 @@
 
 #### Apply 4_0_fix.patch
 - Пофиксил сравнение в `UserServiceTest.get`
-- В `UserTestData.getUpdated`, для более полого тестирования, меняю все поля 
+- В `UserTestData.getUpdated` меняю все поля для более полого тестирования 
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW3
 
@@ -20,10 +20,10 @@
 #### **Apply 4_1_HW3.patch**
 
 #### [Сравнение времени выполнения для разных индексов](meals_index.md)
-- <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">На id как на primary key индекс создается автоматически</a>.
-- все запросы в таблицу meals у нас идут с `user_id`
-- по полю `date_time` также есть запросы + мы по нему сортируем список результатов, те они - хорошие кандидаты для индексирования.
-- следует иметь в виду: индексы ускоряют операции чтения, но замедляют вставку и удаление, поэтому необходим анализ в реальном приложении
+- <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">На id как на primary key индекс создается автоматически</a>
+- Все запросы в таблицу meals у нас идут с `user_id`
+- По полю `date_time` не только есть запросы, но и сортируем результат. То есть это поле - хороший кандидат для индексирования
+- Следует иметь в виду, что индексы ускоряют операции чтения, но замедляют вставку и удаление. Поэтому необходим анализ в реальном приложении
 - [Оптимизация запросов. Основы EXPLAIN в PostgreSQL](https://habrahabr.ru/post/203320/)
 - [Оптимизация запросов. Часть 2](https://habrahabr.ru/post/203386/)
 - [Оптимизация запросов. Часть 3](https://habrahabr.ru/post/203484/)
@@ -42,10 +42,10 @@
 
 ## Занятие 4:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU005ZzBNZmZnTVU">Методы улучшения качества кода</a>
-- Добавьте в своем `readme.md` сверху две строчки `Codacy Badge` и `Build Status`, по аналогии c моим [README.md](https://github.com/JavaWebinar/topjava/blob/master/README.md) ([Raw](https://raw.githubusercontent.com/JavaWebinar/topjava/master/README.md)). `Codacy Badge` берется с сайта `codacy -> Settings`
+- Добавьте в своем `readme.md` сверху две строчки `Codacy Badge` и `Build Status`, по аналогии с моим [README.md](https://github.com/JavaWebinar/topjava/blob/master/README.md) ([Raw](https://raw.githubusercontent.com/JavaWebinar/topjava/master/README.md)). `Codacy Badge` берется с сайта `codacy -> Settings`
   - <a href="https://www.codacy.com">Codacy Check code</a> (проверка стиля и поиск багов в коде).
-     - добавил [Codacy configuration file](https://support.codacy.com/hc/en-us/articles/360005097654-Ignore-files-from-Codacy-analysis) для ислючения из проверок содержимого `webapp` и `READ.me` (на нашем проекте он выдает на них кучу ошибок)
-     - после правок паттернов можно сделать [повторный анализ](https://support.codacy.com/hc/en-us/articles/213840489-How-do-I-reanalyze-my-project-). С результатами тормозит.  
+     - добавил [Codacy configuration file](https://support.codacy.com/hc/en-us/articles/360005097654-Ignore-files-from-Codacy-analysis) для исключения из проверок содержимого `webapp` и `READ.me` (на нашем проекте он выдает на них кучу ошибок)
+     - после правок паттернов можно сделать [повторный анализ](https://support.codacy.com/hc/en-us/articles/213840489-How-do-I-reanalyze-my-project-). С результатами тормозит  
   - <a href="https://travis-ci.org/">Сборку и тесты Travis</a> (результат выполнения тестов проекта)
      - [Что такое travis-ci.org](https://habr.com/post/140344/)
      - [Travis CI Tutorial](https://dzone.com/articles/travis-ci-tutorial-java-projects)
@@ -75,19 +75,19 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFVWZYcHoyUF9qX2M">ORM. Hibernate. JPA.</a>
 <a href="https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model">Entity</a>- класс (объект Java), который в ORM маппится в таблицу DB.
 
-> - ВНИМАНИЕ: патч меняет `postgres.properties`, в котором у вас возможно свои креденшелы к базе.
-> - `hibernate-core` с 5.2.x включает `hibernate-entitymanager` и `hibernate-java8`, конверторы Time API уже не нужны.
+> - ВНИМАНИЕ: патч меняет `postgres.properties`, в котором у вас, возможно, свои креденшелы к базе
+> - `hibernate-core` с 5.2.x включает `hibernate-entitymanager` и `hibernate-java8`, то есть конверторы Time API уже не нужны
 >    -  <a href="http://stackoverflow.com/questions/23718383/jpa-support-for-java-8-new-date-and-time-api">JPA support for Java 8 new date and time API</a>
 >    -  <a href="http://stackoverflow.com/questions/31965179/whats-new-in-hibernate-5">What's new in Hibernate 5?</a>
 >    -  <a href="http://stackoverflow.com/a/33001846/548473">JPA support for Java 8 new date and time API</a>
 > - [EL implementation provided by the container. In a Java SE you have to add an implementation as dependency to your POM file](http://hibernate.org/validator/documentation/getting-started/#unified-expression-language-el): добавил `javax.el` зависимость со `scope=provided`
 
 #### **Apply 4_8_add_jpa.patch**
-> - **Внимание: при [настройке JPA в IDEA](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-jpa) ПРОВЕРЬТЕ, что у вас не подтянулсь Java EE 6 libraries. Все зависимости в проект попадают только через Maven, перед настройкой сначала подтяните его зависимости**
+> - **Внимание: при [настройке JPA в IDEA](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-jpa) ПРОВЕРЬТЕ, что у вас не подтянулись Java EE 6 libraries. Все зависимости в проект попадают только через Maven. Перед настройкой сначала подтяните его зависимости**
 > - Тесты и приложение ломаются. `MealServiceTest` починится после выполнения HW04 (`JpaMealRepository`)
 > - Если вы используете Java 9 и выше, то возникают проблемы с `JAXBException` (пакет `java.xml.bind`). [См. решение](https://www.concretepage.com/forum/thread?qid=531)
 - Дополнительно:
-    -  <a href="http://ru.wikipedia.org/wiki/ORM">ORM</a>.
+    -  <a href="http://ru.wikipedia.org/wiki/ORM">ORM</a>
     -  <a href="http://habrahabr.ru/post/265061/">JPA и Hibernate в вопросах и ответах</a>
     - [Hibernate — о чем молчат туториалы](https://habr.com/ru/post/416851/)
     - [Наследование в Hibernate: выбор стратегии](https://habrahabr.ru/post/337488/)
@@ -95,7 +95,7 @@
     - [Field vs property access](http://stackoverflow.com/a/6084701/548473)
     - <a href="http://www.quizful.net/post/Hibernate-3-introduction-and-writing-hello-world-application">Hibernate: введение и написания Hello world приложения</a>
     - [15 reasons why we need to choose Hibernate over JDBC](https://habiletechnologies.com/blog/reasons-to-choose-hibernate-over-jdbc)
-    -  <a href="http://en.wikibooks.org/wiki/Java_Persistence/Mapping">Mapping: описания модели Hibernate (hbm.xml/annotation)</a>.
+    -  <a href="http://en.wikibooks.org/wiki/Java_Persistence/Mapping">Mapping: описание модели Hibernate (hbm.xml/annotation)</a>.
     -  <a href="https://ru.wikipedia.org/wiki/Hibernate_(библиотека)">Hibernate</a>. Другие ORM: <a href="http://en.wikipedia.org/wiki/TopLink">TopLink</a>, <a href="http://en.wikipedia.org/wiki/EclipseLink">EсlipseLink</a>, <a href="http://en.wikipedia.org/wiki/Ebean">EBean</a> (<a href="http://www.playframework.com/documentation/2.2.x/JavaEbean">used in Playframework</a>).
     -  <a href="http://ru.wikipedia.org/wiki/Java_Persistence_API">JPA (wiki)</a>. <a href="https://en.wikipedia.org/wiki/Java_Persistence_API">JPA (english wiki)</a>. <a href="http://www.jpab.org/All/All/All.html">JPA Performance Benchmark</a>
     -  <a href="http://en.wikibooks.org/wiki/Java_Persistence/Identity_and_Sequencing">Стратегии генерации PK</a>
@@ -118,9 +118,9 @@
 > ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png)  Зачем надо начинать транзакцию, если речь идет только о чтении данных? Начало транзакции при выполнении операции чтения всего лишь добавит лишних накладных расходов 
 (см. [Стратегии работы с транзакциями, pаспространенные ошибки](https://www.ibm.com/developerworks/ru/library/j-ts1/index.html))
 
-Вот ответ от Oliver Drotbohm, автора Spring-Data на предложение работать без транзакция для операций чтения (`propagation=Propagation.SUPPORTS`): [Improve performance with Propagation.SUPPORTS for readOnly operation](https://jira.spring.io/browse/DATAJPA-601). Коротко:
-- Статья устаревшая и неверно упрощает многие вещи. Есть множество вещей, которые влияют на производительность. 
-- Без транзакции не будет оптимизация по флагу `readOnly` при выполнении JDBC и в управлении ресурсами Spring's JPA. (в том числе выключение `flush`)
+Вот ответ от Oliver Drotbohm, автора Spring-Data на предложение работать без транзакций для операций чтения (`propagation=Propagation.SUPPORTS`): [Improve performance with Propagation.SUPPORTS for readOnly operation](https://jira.spring.io/browse/DATAJPA-601). Коротко:
+- Статья устаревшая и неверно упрощает многие вещи. Есть множество вещей, которые влияют на производительность
+- Без транзакции не будет оптимизации по флагу `readOnly` при выполнении JDBC и в управлении ресурсами Spring's JPA (в том числе выключение `flush`)
 См. [Non-transactional data access and the auto-commit mode](https://developer.jboss.org/wiki/Non-transactionalDataAccessAndTheAuto-commitMode)
 
 Справочник:
@@ -150,28 +150,28 @@
 
 >  Есть несколько аналогичных "встроенных" баз данных. H2, HSQLDB, Derby, SQLite. Почему был выбран HSQLDB?
 
-Просто с ней приходилось работать. HSQLDB и H2 наиболее популярны, в новом курсе по spring-boot планирую использовать H2.
+Просто с ней приходилось работать. HSQLDB и H2 наиболее популярны. В новом курсе по spring-boot планирую использовать H2.
 Здесь интересное краткое описание <a href="http://easyjava.ru/data/vstraivaemye-bazy-dannyx-v-java/">встраиваемых баз данных в Java</a>. 
-В HSQLDB нет репликаций, кластеризации, и объем данным ограничен несколькими TB. Для большого количества приложений она подходит и для продакшена. См.
+В HSQLDB нет репликаций, кластеризации и объем данным ограничен несколькими TB. Для большого количества приложений она подходит и для продакшена. См.
 - <a href="http://stackoverflow.com/questions/4152911/what-is-hsqldb-limitations">What is HSQLDB limitations?</a>
 - <a href="https://habrahabr.ru/sandbox/23199/">HSQLDB в режиме in-process</a>
 
-> Чистого JPA не существует, т.е. это всего лишь интерфейс, спецификация? Говорим JPA, подразумеваем какой-то ORM фрэймворк? А что тогда используют чистый jdbc, Spring-jdbc, MyBatis? MyBatis не реализует JPA?
+> Чистого JPA не существует, т. е. это всего лишь интерфейс, спецификация? Говорим JPA, подразумеваем какой-то ORM фрэймворк? А что тогда используют чистый jdbc, Spring-jdbc, MyBatis? MyBatis не реализует JPA?
 
 <a href="https://ru.wikipedia.org/wiki/ORM">ORM</a> это технология связывания БД и объектов приложения, а <a href="https://ru.wikipedia.org/wiki/Java_Persistence_API">JPA</a> - это JavaEE спецификация (API) этой технологии.
-Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появилась позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA, это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
+Реализации JPA - Hibernate, OpenJPA, EclipceLink, но, например, Hibernate может работать по собственному API (без JPA, которая появилась позже). Spring-JDBC, MyBatis, JDBI не реализуют JPA - это обертки к JDBC. Все ORM и JPA также реализованы поверх JDBC.
 
-> В зависимостях maven `hibernate-entitymanager` тянет за собой `jboss-logging`. Как будет происходить логгирование?
+> В зависимостях maven `hibernate-entitymanager` тянет за собой `jboss-logging`. Как будет происходить логирование?
 
 <a href="http://stackoverflow.com/questions/11639997/how-do-you-configure-logging-in-hibernate-4-to-use-slf4j">How do you configure logging in Hibernate 4 to use SLF4J</a>: в нашем проекте автоматически подхватывается `logback-classic`.
 
 > В чем преимущество Hibernate?
 
-Hibernate (как любая ORM) реализует маппинг таблиц в объекты Java. Когда мы добавим роли пользователю, вы увидите, насколько код будет проще, чем в jdbc. Также см. <a href="https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/">5 Reasons to Use JPA / Hibernate</a>
+Hibernate (как любая ORM) реализует мапинг таблиц в объекты Java. Когда мы добавим роли пользователю, вы увидите, насколько код будет проще, чем в jdbc. Также см. <a href="https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/">5 Reasons to Use JPA / Hibernate</a>
 
 > Чем отличается `@Column(nullable = false)`  от  `@NotNull` и есть ли необходимость указывать обе аннотации ?
 
-`@Column(nullable = false)` - это атрибуты колонки таблицы базы. `@NotNull` - это валидация, которая происходит в приложении перед вставкой в базу. Если колонка ненулевая, то `NOT NULL` обязательна. Валидация - опциональна. Также см.
+`@Column(nullable = false)` - это атрибуты колонки таблицы базы. `@NotNull` - это валидация, которая происходит в приложении перед вставкой в базу. Если колонка ненулевая, то `NOT NULL` обязательна. Валидация опциональна. Также см.
 <a href="http://stackoverflow.com/questions/7439504/">@NotNull vs @Column(nullable = false)</a>
 
 > почему мы в бине `entityManagerFactory` не указали диалект базы данных?
@@ -180,18 +180,18 @@ Hibernate (как любая ORM) реализует маппинг таблиц
 
 > В чем разница между `persist` и `merge`
 
-<a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Подробный ответ со Stackovwrflow</a> с объяснением разницы. Упрощенно:
+<a href="http://stackoverflow.com/questions/1069992/jpa-entitymanager-why-use-persist-over-merge">Подробный ответ со Stackoverflow</a> с объяснением разницы. Упрощенно:
   - `merge`, в отличие от `persist`, делает запрос в базу данных, если entity нет в текущей сессии
   - entity, переданный в `merge`, не меняется. Нужно использовать возвращаемый результат
 
-> `em.merge` - при отсутствии старой записи (несуществующий `id`) создает новую. Т. е. в `JpaUserRepository` нарушается логика
+> `em.merge` при отсутствии старой записи (несуществующий `id`) создает новую. Т. е. в `JpaUserRepository` нарушается логика
 
 В Hibernate есть такая бага: https://hibernate.atlassian.net/browse/HHH-1661, https://stackoverflow.com/questions/34249483
 - [Hibernate unexpectedly issues INSERT instead of throwing the javax.persistence.OptimisticLockException, when a nonexistent entity is passed to merge()](https://stackoverflow.com/questions/34249483)
 - [Should Hibernate Session#merge do an insert when receiving an entity with an ID?](https://stackoverflow.com/questions/21489300)
 
-Если это действительно наш критичный бизнес-кейс (например, с многопоточным удалением entity) нужно искать варианты обходного решения.
-Если же это не бизнес-кейс (попытка поломать или ошибка UI), то оставляем как есть (обычно на практике не парятся)
+Если это действительно наш критичный бизнес-кейс (например, с многопоточным удалением entity), то нужно искать варианты обходного решения.
+Если это не бизнес-кейс (попытка поломать или ошибка UI), то оставляем как есть (обычно на практике не парятся).
 
 > Почему в проекте транзакционность сделана в слое репозитория, а не сервиса? Транзакциями удобнее пользоваться на слое сервисов, так как здесь  реализуется бизнес логика и бывает нужно делать несколько операций в одной транзакции.
 
@@ -220,24 +220,24 @@ Hibernate (как любая ORM) реализует маппинг таблиц
         User ref = em.getReference(User.class, userId);
         meal.setUser(ref);
 
-   При этом от `User` нам нужен только `id`. Над `id` создается lazy прокси, который обращается к базе при запросе любого поля. Т.е. у нас запроса в базу за юзером не будет - проверьте по логам Hibernate.
+   При этом от `User` нам нужен только `id`. Над `id` создается lazy прокси, который обращается к базе при запросе любого поля. Т. е. у нас запроса в базу за юзером не будет: проверьте по логам Hibernate.
 
 **Внимание: проверять запросы Hibernate нужно через run. Если делаете debug и брекпойнт, то могут делаться лишние запросы к базе (дебаггер дергает `toString`)**
    
 - 2: В JPQL запросах можно писать: `m.user.id=:userId`
-- 3: При реализации `JpaMealRepository` предпочтительно не использовать `try-catch` в логике реализации. Но если очень хочется, то ловить только специфические исключения (напр. `NoResultException`), чтобы, например, при отсутствии коннекта к базе приложение отвечало адекватно.
+- 3: При реализации `JpaMealRepository` предпочтительно не использовать `try-catch` в логике реализации. Но, если очень хочется, то ловить только специфические исключения (напр. `NoResultException`), чтобы, например, при отсутствии коннекта к базе приложение отвечало адекватно.
 - 4: Мы будем смотреть генерацию db-скриптов из модели. Для корректной генерации нужно в `Meal` добавить `uniqueConstraints`
 - 5: При записи в базу через `namedQuery` валидация энтити не работает, только валидация в БД.
 - 6: Результат `AssertionError` печатает результаты через `toString`, и поля в выводе могут не совпадать с полями сравнения (`toString` одинаковый, при этом сравнение идет по другим полям и вылетает ошибка)
 - 7: Если нашему приложению `Meal.user` не требуется, не следует включать его в тесты. В следующем уроке мы потренируемся разными способами доставать зависимости `Meal.user` и `User.meals`
 
 --------------------------------
-## [Выпускной проект](graduation.md)
-Новая информация плохо оседает в голове, когда дается в виде патчей, поэтому, чтобы она стала "твоей", нужно еще раз проделать это самостоятельно. Домашнее задание на этом уроке небольшое, а полученных знаний уже достаточно, чтобы после его выполнения начинать делать выпускной проект, основанный на нашем стеке.
-Выпускной проект делаете в паралели с нашим: прошли тему занятия - сделали ее в выпускном. Не следует забегать вперед, но и не отставайте!
-- Для проекта я взял реальное тестовое задание, поэтому жалоб не неясность формулировок принимать не буду - сделайте как поняли. Представьте, что это **ваше тестовое задание на работу**.
-- Общение по выпусному в канале Slack *#graduation*
-- **Обязательно проверяйся [по рекомендациям в конце выпускного](graduation.md#-Рекомендации)**
-- По завершению ты сможешь занести этот проект в свое портфолио и резюме как собственный, без всяких оговорок.
+## [Выпускной проект](../graduation.md)
+Новая информация плохо оседает в голове, когда дается в виде патчей. Поэтому, чтобы она стала "твоей", нужно еще раз проделать это самостоятельно. Домашнее задание на этом уроке небольшое, а полученных знаний уже достаточно для реализации выпускного проекта, основанного на нашем стеке.
+Выпускной проект делайте параллельно с нашим: прошли тему занятия - сделали ее в выпускном. Не следует забегать вперед, но и не отставайте!
+- Для проекта я взял реальное тестовое задание, поэтому жалоб на неясность формулировок принимать не буду. Сделайте как поняли. Представьте, что это **ваше тестовое задание на работу**
+- Общение по выпускному в канале Slack *#graduation*
+- **Обязательно проверяйся [по рекомендациям в конце выпускного](../graduation.md#-Рекомендации)**
+- По завершению вы сможете занести этот проект в свое портфолио и резюме как собственный без всяких оговорок
 
 ### Успехов в выполнении!
