@@ -37,7 +37,7 @@
   - [26 рекомендаций по использованию типа var в Java](https://habr.com/ru/post/438206/)
 - `switch` в `MealServlet` перевел на новый формат (IDEA сама переводит по Alt+Enter). 
   - [Новые switch выражения](https://habr.com/ru/post/443464/)
-- В `JdbcMealRepository.save` использовал [Text Blocks](https://www.infoq.com/articles/java-text-blocks/)
+- В `JdbcUserRepository.save` использовал [Text Blocks](https://www.infoq.com/articles/java-text-blocks/)
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW4
 
