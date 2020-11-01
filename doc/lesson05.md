@@ -25,8 +25,8 @@
 - В `MealServiceTest.updateNotOwn` добавил дополнительную проверку, что еда в тесте не модифицировалась. 
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. [Обзор JDK 9/11. Миграция Topjava с 1.8 на JDK 15](http://javaops.ru/view/resources/jdk8_11)
-### Внимание: для JDK 15 обновите IDEA на последнюю версию
-> - Проект обновил до JDK 15. Для запуска Tomcat не из IDEA проверь переменную окружения `JAVA_HOME` (версия java в path проверяется просто: `java -version`) и версию Tomcat 9.x.
+### Внимание: для JDK 15 обновите IDEA на последнюю версию и Tomcat на 9.x
+> - Проект обновил до JDK 15. Для запуска Maven или Tomcat переопредели переменную окружения `JAVA_HOME` и переменную `path`, чтобы  `java -version` тоже было 15
 
 - [API, ради которых наконец-то стоит обновиться с Java 8 (1)](https://habr.com/ru/post/485750)
 - [API, ради которых наконец-то стоит обновиться с Java 8 (2)](https://habr.com/ru/post/487636)
