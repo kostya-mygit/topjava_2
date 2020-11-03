@@ -6,7 +6,7 @@
 
 #### Apply 4_0_fix.patch
 - Пофиксил сравнение в `UserServiceTest.get`
-- В `UserTestData.getUpdated` меняю все поля для более полого тестирования 
+- В `UserTestData.getUpdated` меняю все поля для более полного тестирования 
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW3
 
