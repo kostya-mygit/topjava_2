@@ -4,8 +4,9 @@
 
 ### ![correction](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 
-#### Apply 5_0_fix.patch
-- заменены deprecated методы
+#### Apply 6_0_fix.patch
+- замена deprecated метода
+- рефакторинг `Profiles`
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW5
 
@@ -141,7 +142,7 @@ C `@BatchSize(size = 200)` делается запрос на юзеров (1), 
 
 Плагин запускается после сборки проекта. Запуск из командной строки:
 
-     mvn clean package -DskipTests=true org.codehaus.cargo:cargo-maven2-plugin:1.7.10:run
+     mvn clean package -DskipTests=true org.codehaus.cargo:cargo-maven2-plugin:1.8.2:run
 
 Приложение деплоится в application context topjava: [http://localhost:8080/topjava](http://localhost:8080/topjava)
 
