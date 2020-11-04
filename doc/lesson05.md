@@ -208,6 +208,7 @@
   -  3.1 **сделать один базовый класс для `MealServiceTest` и `UserServiceTest`**.
   -  3.2 сводку по времени выполнения тестов также сделать для `user`
 - 4: Проверить запуск всех тестов: `mvn test` (в IDEA Maven Lifecycle - `test`, кнопку `skipTest` отжать).
+#### `Jdbc` реализация не работает с `hsqldb`. Чиним в _Optional п.6_
 
 ### Optional
 
