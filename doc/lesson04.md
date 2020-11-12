@@ -204,7 +204,7 @@ Hibernate (как любая ORM) реализует мапинг таблиц �
 - 1: Сделать из `Meal` Hibernate entity
   - <a href="http://stackoverflow.com/questions/17137307">Hibernate Validator: @NotNull, @NotEmpty, @NotBlank</a>
   - <a href="https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne">Реализация ManyToOne</a>
-- 2: Имплементировать и протестировать `JpaMealRepository`.
+- 2: Имплементировать и протестировать `JpaMealRepository`. Проверьте, нет ли в запросах ненужных данный (лишних `JOIN`)
 
 ### Optional
 
