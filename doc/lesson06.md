@@ -180,7 +180,7 @@ C `@BatchSize(size = 200)` делается запрос на юзеров (1), 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 10. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUEctTkRSMWNvRjg">Spring Internationalization</a>
 #### Apply 6_15_spring_i18n.patch
 **Внимание: проверьте, что переменная окружения `TOPJAVA_ROOT` настроена!**
-> - В локализации поменял <a href="http://forum.spring.io/forum/spring-projects/web/1077-differences-between-spring-message-and-fmt-message?p=451622#post451622">`fmt:message` на `spring:message`</a>
+> - В локализации поменял <a href="https://stackoverflow.com/questions/4441682/what-to-use-for-localization-in-jsps-with-spring">`fmt:message` на `spring:message`</a>
 > - Выбор языка зависит от языка операционной системы и заголовка `Accept-Language`. Добавил в `spring-mvc.xml` `messageSource` параметр [`fallbackToSystemLocale`](http://stackoverflow.com/questions/4281504/spring-local-sensitive-data).
 Он управляет выбором, куда переключаться при выборе `en` и отсутствии `app_en.properties`: локаль операционной системы или `app.properties` (`fallbackToSystemLocale=false`). Переключение локалей будем реализовывать в конце проекта.  
 
