@@ -272,7 +272,7 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
   - 2.3.1 В реализации `getAll` НЕ делать запрос ролей для каждого юзера (N+1 select)
   - 2.3.2 При save посмотрите на <a href="https://www.mkyong.com/spring/spring-jdbctemplate-batchupdate-example/">batchUpdate()</a>
 - 2.4 Добавить проверку ролей в `UserTestData.USER_MATCHER.assertMatch` и починить ВСЕ тесты (тесты должны проходить для юзера с несколькими ролями)  
-- 2.5 Добавить валидацию для `Jdbc..Repository` через Bean Validation API (для JPA это делается автоматически при сохранении в базу. Для Jdbc мы должны это длеать вручную).  Оптимизировать код.
+- 2.5 Добавить валидацию для `Jdbc..Repository` через Bean Validation API (для JPA это делается автоматически при сохранении в базу, для Jdbc мы должны это делать вручную).  Оптимизировать код.
    - Валидацию `@NotNull` для `Meal.user` пока можно закомментировать. На 10-м уроке решим проблему через [Jackson JSON Views](http://www.baeldung.com/jackson-json-view-annotation)
    - [Валидация данных при помощи Bean Validation API](https://alexkosarev.name/2018/07/30/bean-validation-api/) 
 
