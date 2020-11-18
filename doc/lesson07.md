@@ -12,7 +12,7 @@
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=1luHTJOXQW-BWyueqsfzzAeiP8lUTZkje">HW6</a>
 #### Apply 7_01_HW6_fix_tests.patch
-> Инжекшен в `AbstractUserServiceTest.jpaUtil` сделал [`@Lazy`](https://www.logicbig.com/tutorials/spring-framework/spring-core/lazy-at-injection-point.html): не иннициализировать бин до первого использования.
+> Инжекшен в `AbstractUserServiceTest.jpaUtil` сделал [`@Lazy`: не иннициализировать бин до первого использования](https://www.logicbig.com/tutorials/spring-framework/spring-core/lazy-at-injection-point.html).
 
 #### Apply 7_02_HW6_meals.patch
 > сделал фильтацию еды через `get`: операция идемпотентная, можно делать в браузере обновление по F5
