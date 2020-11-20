@@ -190,7 +190,7 @@ hamcrest-all используется в проверках `RootControllerTest`
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW07
 
 - 1: Добавить тесты контроллеров:
-  - 1.1 `RootControllerTest.testMeals` для `meals.jsp`
+  - 1.1 `RootControllerTest.getMeals` для `meals.jsp`
   - 1.2 Сделать `ResourceControllerTest` для `style.css` (проверить `status` и `ContentType`)
 - 2: Реализовать `MealRestController` и протестировать его через `MealRestControllerTest`
   - 2.1 следите, чтобы url в тестах совпадал с параметрами в методе контроллера. Можно добавить логирование `<logger name="org.springframework.web" level="debug"/>` для проверки маршрутизации.
@@ -214,4 +214,4 @@ hamcrest-all используется в проверках `RootControllerTest`
 - 5: При проблемах с собственным форматтером убедитесь, что в конфигурации `<mvc:annotation-driven...` не дублируется
 - 6: **Проверьте выполение ВСЕХ тестов через maven**. В случае проблем проверьте, что не портите константу из `MealTestData`
 - 7: `@Autowired` в тестах нужно делать в том месте, где класс будет использоваться. Общий принцип: не размазывать код по классам, объявление переменных держать как можно ближе к ее использованию, группировать (не смешивать) код с разной функциональностью.
-- 8: Попробуйте в `RootControllerTest.testMeals` сделать сравнение через `model().attribute("meals", expectedValue)`. Учтите, что вывод результатов через `toString` к сравнению отношения не имеет
+- 8: Попробуйте в `RootControllerTest.getMeals` сделать сравнение через `model().attribute("meals", expectedValue)`. Учтите, что вывод результатов через `toString` к сравнению отношения не имеет
