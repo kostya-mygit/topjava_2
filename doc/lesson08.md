@@ -1,5 +1,3 @@
-https://alvinalexander.com/blog/post/java/determine-current-directory-i-e-where-my-application-is-started/
-
 # Онлайн-проект <a href="https://github.com/JavaWebinar/topjava">Topjava</a>
 
 ## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFfkpMd2UyWjBsc2JsSE4tRDFkU3BvMktFQkhUN1J6VExxSUUzOHlSR0RhNm8">Материалы занятия</a>
@@ -17,9 +15,6 @@ https://alvinalexander.com/blog/post/java/determine-current-directory-i-e-where-
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. [HW7](https://drive.google.com/file/d/1h6wg2V9yZoNX7fA7mNA7w7Kxp8IACsIJ)
 
 #### Apply 8_01_HW07_controller_test.patch
-> В `RootControllerTest.testMeals()` сделал проверку через `model().attribute("meals", expectedValue)`.
-  Сравнение происходит через `MealTo.equals()`, который мы можем переопределить, т.к. он Transfer Object, не является сущностью (Entity).
-------------------
 - [Persistent classes implementing equals and hashcode](https://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html_single/#persistent-classes-equalshashcode): переопределять `equals()/hashCode()` необходимо, если
   - использовать Entity в `Set` (рекомендовано для many ассоциаций), либо как ключи в `HashMap`
   - использовать _reattachment of detached instances_ (те манипулировать одним Entity в нескольких транзакциях/сессиях).
@@ -28,9 +23,7 @@ https://alvinalexander.com/blog/post/java/determine-current-directory-i-e-where-
 ------------------------
 
 #### Apply 8_02_HW07_rest_controller.patch
-> - Как и для юзера сериализуем json ответ контроллера и сравниваем через `ResultMatcher`. Для `MealTo` используем в сравнении `isEqualTo`.  
-> - В `MealTo` вместо изменяемых полей и конструктора без параметров сделал `@ConstructorProperties`. `Immutable` классы всегда предпочтительнее для данных.
->   - [Using @ConstructorProperties](https://www.logicbig.com/tutorials/misc/jackson/constructor-properties.html)
+ - В `MealTo` вместо изменяемых полей и конструктора без параметров сделал [`@ConstructorProperties`](https://www.logicbig.com/tutorials/misc/jackson/constructor-properties.html). `Immutable` классы всегда предпочтительнее для данных.
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFLXZ3OHdac18yZlk">HW7_Optional</a>
 #### Apply 8_03_HW07_formatters.patch
@@ -40,7 +33,7 @@ https://alvinalexander.com/blog/post/java/determine-current-directory-i-e-where-
 #### Apply 8_04_HW07_soapui_curl.patch
 > Добавил примеры запросов curl в `config/curl.md`  
   - <a href="http://rus-linux.net/lib.php?name=/MyLDP/internet/curlrus.html">Написание HTTP-запросов с помощью Curl</a> (для Windows можно использовать Git Bash)
-  - В IDEA появился отличный инструмент тестирования запросов. Для конвертации curl в _HTTP request in Editor format_ [скопируйте в .http файл curl без флага `-s`](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html#converting-curl-requests) 
+  - В IDEA появился отличный инструмент тестирования запросов. Для конвертации в [`Tools->HTTP Client->Test RESTful Web Service`](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html) скопируйте curl без флага `-s` 
   
 ## Занятие 8:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3.  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUmVsM3V6djMzYmc">WebJars. jQuery and JavaScript frameworks</a>
@@ -66,7 +59,6 @@ https://alvinalexander.com/blog/post/java/determine-current-directory-i-e-where-
 > - [WIKI Bootstrap](https://ru.wikipedia.org/wiki/Bootstrap_(фреймворк))
 > - Добавил <a href="https://www.w3schools.com/icons/fontawesome_icons_intro.asp">Font Awesome</a>
 >   - [Map glyphicon icons to font-awesome](https://gist.github.com/blowsie/15f8fe303383e361958bd53ecb7294f9)
-> - В таблице удаление/редактирование сделал без кнопок (линками)
 
 - [Bootstrap](https://getbootstrap.com/)
    - [Bootstrap Examples](https://getbootstrap.com/docs/4.1/examples/)
@@ -181,15 +173,13 @@ Bootstrap css это стили (форматирование), Bootstrap js з�
 -  <a href="http://www.baeldung.com/security-spring">Security with Spring</a>
 -  [Decode/Encode Base64 online](http://decodebase64.com/)
 
-- Вместо 
+Вместо 
 
 `curl -v -H 'Authorization: Basic dXNlckB5YW5kZXgucnU6cGFzc3dvcmQ=' http://localhost:8080/topjava/rest/profile/meals`
 
 лучше использовать эквивалентный
 
 `curl -v --user user@yandex.ru:password http://localhost:8080/topjava/rest/profile/meals`
-
-- Также можно копировать curl запросы напрямую в `Tools->HTTP Client->Test RESTful Web Service`, ***удалив опцию `-s`*** 
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 
@@ -200,7 +190,10 @@ Bootstrap css это стили (форматирование), Bootstrap js з�
 > Как по REST определяется залогиненный юзер? Аутентификация происходит при каждом запросе?
 
 <a href="http://stackoverflow.com/questions/319530/restful-authentication">Способы RESTful Authentication</a>.
-Мы будем использовать 2: coockie + http session (на след. уроке) и Basic Authentication с аутентификацией при каждом запросе.
+Мы будем использовать 2:  
+- Basic Authentication для REST контроллеров с аутентификацией при каждом запросе 
+- coockie + http session для UI контроллеров на следующем уроке 
+
 
 > Почему `@RequestParam` не работает в PUT и DELETE запросах?
 
