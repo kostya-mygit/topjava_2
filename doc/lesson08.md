@@ -181,6 +181,9 @@ Bootstrap css это стили (форматирование), Bootstrap js з�
 
 `curl -v --user user@yandex.ru:password http://localhost:8080/topjava/rest/profile/meals`
 
+#### Apply [8_11_fix.patch](https://drive.google.com/file/d/1xWRFi8jTd6eoSNJ-m4rVZk9_va9LhKVB)
+Мелкие правки.
+
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 
 > Как можно в браузере сбросить введенный пароль базовой авторизации?
