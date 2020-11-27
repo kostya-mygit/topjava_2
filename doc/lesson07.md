@@ -122,7 +122,7 @@ GROUP BY u.id
 -  Дополнительно:
    - <a href="https://www.sghill.net/how-do-i-write-a-jackson-json-serializer-deserializer.html">Jackson JSON Serializer & Deserializer</a>
 
-### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 8. [Тестирование REST контроллеров через JSONassert и Матчеры](https://drive.google.com/open?id=1oa3e0_tG57E71g6PW7_tfb3B61Qldctl)</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 8. [Тестирование REST контроллеров через JSONassert и Матчеры](https://drive.google.com/open?id=1oa3e0_tG57E71g6PW7_tfb3B61Qldctl)
 #### Apply 7_14_json_assert_tests.patch
 - [JSONassert](https://github.com/skyscreamer/JSONassert)
 - [Java Code Examples for ObjectMapper](https://www.programcreek.com/java-api-examples/index.php?api=com.fasterxml.jackson.databind.ObjectMapper)
@@ -133,9 +133,11 @@ GROUP BY u.id
 #### Apply 7_16_soapui_utf8_converter.patch
 - Инструменты тестирования REST:
   - <a href="http://www.soapui.org/">SoapUi</a>
-  - <a href="http://rus-linux.net/lib.php?name=/MyLDP/internet/curlrus.html">Написание HTTP-запросов с помощью Curl</a>
-(для Windows можно использовать Git Bash). Для работы с UTF-8 в Windows 10 нужны пляски с бубном: ["Язык и региональные стандарты" -> "Сопутствующие параметры" -> "Административные языковые параметры" -> "Изменить язык системы" -> галка "Бета-версия:Использовать Юникод (UTF-8) для поддержки языка во всем мире"](https://drive.google.com/open?id=1J1WquTv9wenJQ9ptMymXPYGnrvFzAV-L), перезагрузка.
-  - *[IDEA: Tools->HTTP Client->...](https://www.jetbrains.com/help/idea/rest-client-tool-window.html)*
+  - <a href="http://rus-linux.net/lib.php?name=/MyLDP/internet/curlrus.html">Написание HTTP-запросов с помощью Curl</a>.  
+    Для Windows 7 можно использовать Git Bash, с Windows 10 v1803 можно прямо из консоли. Возможны проблемы с UTF-8:
+    - [CURL doesn't encode UTF-8](https://stackoverflow.com/a/41384903/548473)
+    - [Нстройка кодировки в Windows](https://support.socialkit.ru/ru/knowledge-bases/4/articles/11110-preduprezhdenie-obnaruzhenyi-problemyi-svyazannyie-s-raspoznavaniem-russkih-simvolov)
+  - **[IDEA: Tools->HTTP Client->...](https://www.jetbrains.com/help/idea/rest-client-tool-window.html)**
   - <a href="https://www.getpostman.com/">Postman</a>
   - [Insomnia REST client](https://insomnia.rest/)
 
