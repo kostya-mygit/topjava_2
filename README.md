@@ -1,3 +1,6 @@
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3d264645cc644d6eb884962cad054f7f)](https://www.codacy.com/gh/kostya-mygit/topjava_2)
+[![Build Status](https://travis-ci.org/kostya-mygit/topjava_2.svg?branch=master)](https://travis-ci.org/kostya-mygit/topjava_2)
+
 Java Enterprise Online Project
 ===============================
 
