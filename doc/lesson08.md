@@ -23,7 +23,10 @@
 ------------------------
 
 #### Apply 8_02_HW07_rest_controller.patch
- - В `MealTo` вместо изменяемых полей и конструктора без параметров сделал [`@ConstructorProperties`](https://www.logicbig.com/tutorials/misc/jackson/constructor-properties.html). `Immutable` классы всегда предпочтительнее для данных.
+- В `MealTo` вместо изменяемых полей и конструктора без параметров сделал [`@ConstructorProperties`](https://www.logicbig.com/tutorials/misc/jackson/constructor-properties.html). `Immutable` классы всегда предпочтительнее для данных.
+- [Java @SafeVarargs Annotation](https://www.baeldung.com/java-safevarargs)
+- [Паттерн стратегия](https://refactoring.guru/ru/design-patterns/strategy).
+
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFLXZ3OHdac18yZlk">HW7_Optional</a>
 #### Apply 8_03_HW07_formatters.patch
