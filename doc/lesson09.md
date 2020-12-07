@@ -116,7 +116,7 @@
 -  <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop-proxying">Типы проксирования</a>
 -  <a href="http://samolisov.blogspot.ru/2010/04/proxy-java.html">Dynamic Proxy API</a>
 -  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#filter-stack">Security фильтры</a>
--  [Основы работы с Spring Security jn Eugene Suleimanov](https://www.youtube.com/watch?v=7uxROJ1nduk)
+-  [Основы работы с Spring Security от Eugene Suleimanov](https://www.youtube.com/watch?v=7uxROJ1nduk)
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 10. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU3hMR0o4eGNoUmc">Spring Security Test</a>
 #### Apply 9_14_spring_security_test.patch
