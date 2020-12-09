@@ -98,6 +98,11 @@ Maven скачивает все депенденси в local repository, кот
 ##  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFcGs4b1IyWWF2S2c">AJAX. Datatables. jQuery</a>
  JSP полезны, если надо с сервера отдать статический html с серверной логикой (условия, циклы), сформированный на основе модели. Для динамической отрисовки таблицы мы будем использовать REST и JSON на 9м уроке (работа с datatables через Ajax).
 
+По дебагу JavaScript проверьте:
+- в IDEA плагин `JavaScript Debugger`
+- в Chrome расширение [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
+- при проблемах с портами [удалите в настройках IDEA файлы `~\AppData\Roaming\JetBrains\IntelliJIdea2020.x\options\web-browsers.xml` и `other.xml`](https://intellij-support.jetbrains.com/hc/en-us/community/posts/360009567459-Webstorm-2020-2-1-Remote-Debugging-do-not-work)
+
 #### Apply 8_07_ajax_datatables.patch
 > - Переименовал js скрипты по [javascript filename naming convention](https://stackoverflow.com/questions/7273316/what-is-the-javascript-filename-naming-convention)
 > - `reset()` не чистит скрытые (hidden) поля формы. Сделал очистку полей через `form.find(":input").val("")`    
