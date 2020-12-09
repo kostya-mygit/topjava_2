@@ -33,7 +33,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 
 ## Занятие 10:
 
-#### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [Дополнительно: кастомизация JSON (@JsonView) и валидации (groups)](https://drive.google.com/file/d/0B9Ye2auQ_NsFRTFsTjVHR2dXczA)
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. [Дополнительно: кастомизация JSON (@JsonView) и валидации (groups)](https://drive.google.com/file/d/0B9Ye2auQ_NsFRTFsTjVHR2dXczA)
 **ВНИМАНИЕ! Патчи `10_04_opt` и `10_05_opt` - не обязательные! Если будете делать- то в отдельной ветке (у меня `opt_view_group`). Это варианты решений, которые не идут в `master`.**
 -  [Что возвращать: Entity или DTOs](https://stackoverflow.com/a/21569720/548473)
 
@@ -41,7 +41,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 - [Jackson Annotation ](http://www.baeldung.com/jackson-annotations)
   - [Jackson JSON Views](http://www.baeldung.com/jackson-json-view-annotation)
 - [@JsonView: фильтруем JSON](https://habrahabr.ru/post/307392/)
-- [Jackson set default view](https://stackoverflow.com/questions/22875642/jackson-set-default-view)
+- [Jackson set default view](https://stackoverflow.com/questions/22875642/548473)
 
 #### Apply 10_05_opt_validated_groups.patch
 - [Validation Group in SpringMVC](https://narmo7.wordpress.com/2014/04/26/how-to-set-up-validation-group-in-springmvc/)
@@ -55,8 +55,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 - [jQuery: типы данных](https://jquery-docs.ru/jQuery.ajax/#data-types)
 - [jQuery: конверторы](https://jquery-docs.ru/jQuery.ajax/#using-converters)
 
-> В конвертере добавил дополнительную проверку `typeof json === 'object'`, т.к. при ексепшене не переопределяется `jqXHR.responseJSON`.
-  - [Проблема с jqXHR.responseJSON](https://stackoverflow.com/questions/48229776/how-to-keep-jquery-jqxhr-responsejson-with-own-converters)
+> В конвертере добавил дополнительную проверку `typeof json === 'object'`, т.к. [при ексепшене не переопределяется `jqXHR.responseJSON`](https://stackoverflow.com/questions/48229776/548473)
 
 #### Apply 10_05_persist_validate_group.patch
 - [Default Hibernate validation](https://stackoverflow.com/a/16930663/548473). Т.к.  `Persist` наследуется от `javax.validation.groups.Default`, при сохранении учитываются все непомеченные аннотации валидации (`Default`) + помеченные `Persist`.
@@ -87,8 +86,8 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 #### Apply 10_08_profile_jsptag.patch
 **Глюк Хрома - у меня поле `email` у User показывается неверно (как для admin). В другом браузере, анонимном окне и коде страницы (Ctrl+U) все ок. Я решил локально обновлением Хрома. Еще решения:**
  - [В своем браузере](https://www.howtogeek.com/425270/how-to-disable-form-autofill-in-google-chrome)
- - [Chrome ignores autocomplete=“off”](https://stackoverflow.com/questions/12374442/chrome-ignores-autocomplete-off)
- - [Disabling Chrome Autofill](https://stackoverflow.com/questions/15738259/disabling-chrome-autofill)
+ - [Chrome ignores autocomplete=“off”](https://stackoverflow.com/questions/12374442/548473)
+ - [Disabling Chrome Autofill](https://stackoverflow.com/questions/15738259/548473)
 
 > - Создал отдельный `ProfileUIController` для операций с профилем (вместо `RootController`)
 > - Упростил: в `inputField.tag`: передаю для label код локализации и убрал ветвление
@@ -208,8 +207,8 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 
 ### Optional
 - 4: Сделать обработку ошибки при дублирования dateTime еды. Сделать тесты на дублирование email и dateTime.
-  - [Тесты на DB exception c @Transactional](http://stackoverflow.com/questions/37406714)
-  - [Сheck String in response body with mockMvc](https://stackoverflow.com/questions/18336277/how-to-check-string-in-response-body-with-mockmvc)
+  - [Тесты на DB exception c @Transactional](http://stackoverflow.com/questions/37406714/548473)
+  - [Сheck String in response body with mockMvc](https://stackoverflow.com/questions/18336277/548473)
 - 5: Сделать в приложении выбор локали (см. http://topjava.herokuapp.com/)
   -  <a href="http://www.mkyong.com/spring-mvc/spring-mvc-internationalization-example">Spring MVC internationalization sample</a>
   -  <a href="https://www.concretepage.com/spring-4/spring-mvc-internationalization-localization">Spring 4 MVC Internationalization</a>
