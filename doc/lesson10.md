@@ -196,14 +196,14 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
  Локализация встроена в Hibernate Validation. Смотрите `Ctrl+Shift+N` и `ValidationMessages_ru.properties`.
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW10
-- 1: Сделать валидацию в `AdminUIController/MealUIController` через `ExceptionInfoHandler`. Вернуть клиенту `ErrorInfo` и статус `HttpStatus.UNPROCESSABLE_ENTITY` (тип методов контроллеров сделать `void`). Ошибки валидации отобразить на клиенте так, как это сделано в [demo](http://topjava.herokuapp.com)
+- 1: Сделать валидацию в `AdminUIController/MealUIController` через `ExceptionInfoHandler`. Вернуть клиенту `ErrorInfo` и статус `HttpStatus.UNPROCESSABLE_ENTITY` (тип методов контроллеров сделать `void`). Ошибки валидации отобразить на клиенте красиво (так, как это сделано в [demo](http://topjava.herokuapp.com), без локализации полей)
 - 2: Сделать валидацию принимаемых json объектов в REST контроллерах через `ExceptionInfoHandler`. Добавить в Rest контроллеры тест для невалидных данных.
   - <a href="https://dzone.com/articles/spring-31-valid-requestbody">@Valid @RequestBody + Error handling</a>
-- 3: Сделать обработку ошибки при дублирования email (вывод сообщения "User with this email already exists") для: 
+- 3: Сделать обработку ошибки при дублирования email (вывод сообщения "User with this email already exists", можно без локализации) для: 
   - 3.1 регистрации / редактирования профиля пользователя
-    - <a href="http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example/">Spring MVC form handling example</a>
   - 3.2 добавления / редактирования пользователя в таблице
   - 3.3 REST контроллеров
+    - сделать можно или через `catch DataIntegrityViolationException` или через [собственный валидатор и @InitBinder](http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example).
 
 ### Optional
 - 4: Сделать обработку ошибки при дублирования dateTime еды. Сделать тесты на дублирование email и dateTime.
