@@ -2,7 +2,7 @@
 
 ## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSzlObk8tbHdtcXc">Материалы занятия</a>
 
-### Все материалы проекта (в том числе и будущие обновления) останутся доступны без органичения по времени в [Google Drive](https://drive.google.com/drive/u/0/folders/1cX6fFsuLplCoY8fx2_3PJUjwEiKMB9M_)
+### Все материалы проекта (в том числе и будущие обновления) останутся доступны без органичения по времени в [Google Drive](https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFflp6ZHBLSFI2OGVEZ2NQU0pzZkx4SnFmOWlzX0lzcDFjSi1SRk5OdzBYYkU)
 
 ### ![correction](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 
@@ -41,22 +41,22 @@
 
 #### Apply 11_05_HW10_binder_validation.patch
 > - Добавил корректный способ проверки email своим валидатором: проверка делается в контроллерах, а не при сохранении.
->   - [Spring MVC: валидатор и @InitBinder](https://coderlessons.com/articles/java/spring-mvc-validator-i-initbinder))
+>   - [Spring MVC: валидатор и @InitBinder](https://coderlessons.com/articles/java/spring-mvc-validator-i-initbinder)
 
 > Проблема: при REST update нам могут приходить `User/UserTo` без `id` (он корректируется уже после валидации через `ValidationUtil.assureIdConsistent`)
 > Для UI мы в профиль добавили скрытый `id`, для REST проблема осталась.
 
 #### Apply 11_06_HW10_binder_validation_fix.patch
-> Для этих случаев я сделал тесты - можете проверить, что без правок они не пройдут.
-> Правки заключаются в том, что я для REST update случаев убрал `@Valid` и делаю валидацию вручную в `AbstractUserController.validateBeforeUpdate`.
-> При этом добавил в spring конфигурацию [стандартный валидатор по умолчанию](https://stackoverflow.com/a/23615478/548473)
-> Теперь я могу выбирать, делать проверки автоматически (через `@Valid`) или вручную
+- Для этих случаев я сделал тесты - можете проверить, что без правок они не пройдут.
+- Правки заключаются в том, что я для REST update случаев убрал `@Valid` и делаю валидацию вручную в `AbstractUserController.validateBeforeUpdate`.
+- При этом добавил в spring конфигурацию [стандартный валидатор по умолчанию](https://stackoverflow.com/a/23615478/548473)
+- Теперь я могу выбирать, делать проверки автоматически (через `@Valid`) или вручную
 
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFYms4YUxEMHdxZHM">HW10 Optional: change locale</a>
 #### Apply 11_07_HW10_change_locale.patch
-> - Добавил локализацию календаря `$.datetimepicker.setLocale(localeCode)`
-> - Вместо смены локали в `lang.jsp` через javascript сделал `href=${requestScope['javax.servlet.forward.request_uri']}?lang=..`
-> - Добавил [Collapsing The Navigation Bar](https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp)
+- Добавил локализацию календаря `$.datetimepicker.setLocale(localeCode)`
+- Вместо смены локали в `lang.jsp` через javascript сделал `href=${requestScope['javax.servlet.forward.request_uri']}?lang=..`
+- Добавил [Collapsing The Navigation Bar](https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp)
 
 ## Заключительное 11-е занятие
 
@@ -79,7 +79,7 @@
 - <a href="https://forum.antichat.ru/threads/20140/">XSS для новичков</a>
 - <a href="https://habrahabr.ru/post/66057/">XSS глазами злоумышленника</a>
 - [Prevent people from doing XSS in Spring MVC. **По поводу `@SafeHtml @Depricate` см. UPDATE поста**](http://stackoverflow.com/a/40644276/548473)
-Замену `@SafeHtml` ищу, как вариант [Sanitizing User Input](https://thoughtfulsoftware.wordpress.com/2013/05/26/sanitizing-user-input-part-ii-validation-with-spring-rest/)
+  - Замену `@SafeHtml` ищу, как вариант [Sanitizing User Input](https://thoughtfulsoftware.wordpress.com/2013/05/26/sanitizing-user-input-part-ii-validation-with-spring-rest/)
 
 ### [Обработка ошибок 404 (NotFound)](https://stackoverflow.com/questions/18322279/spring-mvc-spring-security-and-error-handling)
 #### Apply 11_10_404.patch
@@ -159,12 +159,12 @@ Datasources advanced
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  <a href="https://drive.google.com/open?id=1QtHfavgIeLEnKA2Yt58XzKOouiLhg6qX">Разбор типовых собеседований (необработанный вебинар)</a>
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  <a href="http://javaops.ru/view/resources/fromStudyToJob">Вебинар выпускников</a>
 
+-----------------------
+
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png)  Домашнее задание по проекту:
 - **Задеплоить свое приложение в Heroku** 
    - [Маленькие хитрости с Heroku](https://javarush.ru/groups/posts/1987-malenjhkie-khitrosti-s-heroku)
     
----------------------
-
 - **Сделать / обновить резюме (отдать на ревью в канал #hw11 группы slack)**
     - **Вставь ссылку на свой сертификат [из личного профиля](http://javaops.ru/auth/profile#finished), немного досрочно:)**
         - [Загрузка сайта на GitHub. Бесплатный хостинг и домен.](https://vk.com/video-58538268_456239051?list=661b165047264e7952)
@@ -181,15 +181,11 @@ Datasources advanced
     - Заполнить в [своем профиле Java Online Projects](http://javaops.ru/auth/profileER) ссылку на резюме и информацию по поиску работы (если конечно актуально): резюме, флаги рассматриваю работу, готов к релокации и информация для HR.
       - **Рассылку обновления базы соискателей по HR буду рассылать  28.12, постарайтесь успеть**
 
---------------
-
 - **Получить первое открытое занятие МНОГОПОТОЧНОСТЬ и пройти эту важную тему в [проекте Masterjava](http://javaops.ru/view/masterjava)**
    - Обучение на MasterJava идет в индивидуальном режиме без проверки ДЗ: старт в любой момент, время прохождение ничем не ограничено
    - Проект, патчи, группа Slack, занятия и видео, разбор ДЗ анологичны проекту Topjava. 
    - **СЕГОДНЯ последний день акции на MasetrJava**
 
---------------
-    
 - **[Выполнить выпускной проект](https://github.com/JavaWebinar/topjava/blob/doc/doc/graduation.md)**
    - Сроки сдачи указан в выпускном: 10.01.2021 (участникам MasterJava - 10.04.2021)
    - Если есть проверка или Диплом, после выполнения выпускного [заполни форму проверки](https://docs.google.com/forms/d/1G8cSGBfXIy9bNECo6L-tkxWQYWeVhfzR7te4b-Jwn-Q) 
