@@ -26,6 +26,7 @@
 
 #### Apply 11_03_HW10_duplicate_email.patch
 > - сделал код(ключ) i18n константой (`EXCEPTION_DUPLICATE_EMAIL`)
+> - в `GlobalExceptionHandler` добавил логирование и общий код вынес в `ValidationUtil`
 
 #### Apply 11_04_HW10_duplicate_datetime.patch
 > - Реализовать обработку дублирования `user.email` и `meal.dateTime` можно по разному
