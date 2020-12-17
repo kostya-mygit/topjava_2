@@ -45,6 +45,7 @@
 
 > Проблема: при REST update нам могут приходить `User/UserTo` без `id` (он корректируется уже после валидации через `ValidationUtil.assureIdConsistent`)
 > Для UI мы в профиль добавили скрытый `id`, для REST проблема осталась.
+> Для проверки сообщений в тестах в `ExceptionInfoHandler#bindValidationError` сделал `messageSourceAccessor::getMessage` и из сообщений ошибок ушли поля. Починим в патче `11_08_i18n`
 
 #### Apply 11_06_HW10_binder_validation_fix.patch
 - Для этих случаев я сделал тесты - можете проверить, что без правок они не пройдут.
