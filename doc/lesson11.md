@@ -188,14 +188,14 @@ Datasources advanced
    - Проект, патчи, группа Slack, занятия и видео, разбор ДЗ анологичны проекту Topjava. 
    - **СЕГОДНЯ последний день акции на MasetrJava**
 
+### **Пройдите основы Spring Boot по курсу [BootJava](https://javaops.ru/view/bootjava)**
+- **Занятие по миграция на BootJava будет 24.12**
+
 ### **[Выполнить выпускной проект](https://github.com/JavaWebinar/topjava/blob/doc/doc/graduation.md)**
    - Сроки сдачи указан в выпускном: 10.01.2021 (участникам MasterJava - 10.04.2021)
    - Если есть проверка или Диплом, после выполнения выпускного [заполни форму проверки](https://docs.google.com/forms/d/1G8cSGBfXIy9bNECo6L-tkxWQYWeVhfzR7te4b-Jwn-Q) 
    - Если проверки или Диплома нет, заполнять не нужно. 
    -  **Возможно доплатить за ревью отдельно из JavaOPs профиля, как за тестовое собеседование: 2450р**
-
-### **Пройдите основы Spring Boot по курсу [BootJava](https://javaops.ru/view/bootjava)**  
-   - **Занятие по миграция на BootJava будет 24.12**
 
 -------------------------
 
