@@ -199,11 +199,15 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 - 1: Сделать валидацию в `AdminUIController/MealUIController` через `ExceptionInfoHandler`. Вернуть клиенту `ErrorInfo` и статус `HttpStatus.UNPROCESSABLE_ENTITY` (тип методов контроллеров сделать `void`). Ошибки валидации отобразить на клиенте красиво (так, как это сделано в [demo](http://topjava.herokuapp.com), без локализации полей)
 - 2: Сделать валидацию принимаемых json объектов в REST контроллерах через `ExceptionInfoHandler`. Добавить в Rest контроллеры тест для невалидных данных.
   - <a href="https://dzone.com/articles/spring-31-valid-requestbody">@Valid @RequestBody + Error handling</a>
-- 3: Сделать обработку ошибки при дублирования email (вывод сообщения "User with this email already exists", можно без локализации) для: 
+- 3: Сделать обработку ошибки при дублирования email (вывод сообщения "User with this email already exists") для: 
   - 3.1 регистрации / редактирования профиля пользователя
   - 3.2 добавления / редактирования пользователя в таблице
-  - 3.3 REST контроллеров
-    - сделать можно через `catch DataIntegrityViolationException` или (сложнее) через [собственный валидатор и @InitBinder](https://coderlessons.com/articles/java/spring-mvc-validator-i-initbinder).
+  - 3.3 REST контроллеров  
+  Варианты выполнения:
+    - через `catch DataIntegrityViolationException`
+    - обработку ошибок в  `@ExceptionHandler`(https://stackoverflow.com/a/42422568/548473)
+    - более сложная реализация - [собственный валидатор](https://coderlessons.com/articles/java/spring-mvc-validator-i-initbinder)  
+  - Опционально - [сделать локализацию выводимой ошибки](https://www.logicbig.com/tutorials/spring-framework/spring-core/message-sources.html)
 
 ### Optional
 - 4: Сделать обработку ошибки при дублирования dateTime еды. Сделать тесты на дублирование email и dateTime.
