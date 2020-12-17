@@ -162,10 +162,10 @@ Datasources advanced
 -----------------------
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png)  Домашнее задание по проекту:
-- **Задеплоить свое приложение в Heroku** 
-   - [Маленькие хитрости с Heroku](https://javarush.ru/groups/posts/1987-malenjhkie-khitrosti-s-heroku)
+### **Задеплоить свое приложение в Heroku** 
+   - [Маленькие хитрости с Heroku - активность 24/7](https://javarush.ru/groups/posts/1987-malenjhkie-khitrosti-s-heroku)
     
-- **Сделать / обновить резюме (отдать на ревью в канал #hw11 группы slack)**
+### **Сделать / обновить резюме (отдать на ревью в канал #hw11 группы slack)**
     - **Вставь ссылку на свой сертификат [из личного профиля](http://javaops.ru/auth/profile#finished), немного досрочно:)**
         - [Загрузка сайта на GitHub. Бесплатный хостинг и домен.](https://vk.com/video-58538268_456239051?list=661b165047264e7952)
         - [CSS theme for hosting your personal site, blog, or portfolio](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/)
@@ -180,25 +180,23 @@ Datasources advanced
     - **Резюме на hh или других ресурсах ДОЛЖНО БЫТЬ ОТКРЫТО ДЛЯ ПРОСМОТРА и иметь телефон для связи**
     - Заполнить в [своем профиле Java Online Projects](http://javaops.ru/auth/profileER) ссылку на резюме и информацию по поиску работы (если конечно актуально): резюме, флаги рассматриваю работу, готов к релокации и информация для HR.
     - **Рассылку обновления базы соискателей по HR буду рассылать  28.12, постарайтесь успеть**
+    - По [стажировка с последующим трудоустройством в Москве/ Санкт-Петербурге](http://javaops.ru/view/topjava#internship) детали будут в январе 2021.
 
-- **Получить первое открытое занятие МНОГОПОТОЧНОСТЬ и пройти эту важную тему в [проекте Masterjava](http://javaops.ru/view/masterjava)**
+### **Получить первое открытое занятие МНОГОПОТОЧНОСТЬ и пройти эту важную тему в [проекте Masterjava](http://javaops.ru/view/masterjava)**
    - Обучение на MasterJava идет в индивидуальном режиме без проверки ДЗ: старт в любой момент, время прохождение ничем не ограничено
    - Проект, патчи, группа Slack, занятия и видео, разбор ДЗ анологичны проекту Topjava. 
    - **СЕГОДНЯ последний день акции на MasetrJava**
 
-- **[Выполнить выпускной проект](https://github.com/JavaWebinar/topjava/blob/doc/doc/graduation.md)**
+### **[Выполнить выпускной проект](https://github.com/JavaWebinar/topjava/blob/doc/doc/graduation.md)**
    - Сроки сдачи указан в выпускном: 10.01.2021 (участникам MasterJava - 10.04.2021)
    - Если есть проверка или Диплом, после выполнения выпускного [заполни форму проверки](https://docs.google.com/forms/d/1G8cSGBfXIy9bNECo6L-tkxWQYWeVhfzR7te4b-Jwn-Q) 
    - Если проверки или Диплома нет, заполнять не нужно. 
    -  **Возможно доплатить за ревью отдельно из JavaOPs профиля, как за тестовое собеседование: 2450р**
 
---------------
-   
-- По [стажировка с последующим трудоустройством в Москве/ Санкт-Петербурге](http://javaops.ru/view/topjava#internship) детали будут в январе 2021.  
-- **Пройдите основы Spring Boot по курсу [BootJava](https://javaops.ru/view/bootjava)**  
-- **Занятие по миграция на BootJava будет 24.12**
+### **Пройдите основы Spring Boot по курсу [BootJava](https://javaops.ru/view/bootjava)**  
+   - **Занятие по миграция на BootJava будет 24.12**
   
-## Возможные доработки приложения:
+### Возможные доработки приложения:
 -  Разделить `Meal.dateTime` на `date` и `time` и выполнять запрос целиком в SQL
 -  Для редактирования паролей сделать отдельный интерфейс с запросом старого пароля и кнопку сброса пароля для администратора.
 -  Добавление и удаление ролей для пользователей в админке.
@@ -213,7 +211,7 @@ Datasources advanced
 -  <a href="http://www.mkyong.com/spring-security/spring-security-limit-login-attempts-example">Limit login attempts example</a>
 -  Сделать авторизацию REST по <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a>
 
-## Доработки участников прошлых выпусков:
+### Доработки участников прошлых выпусков:
 - [Авторизация в приложение по OAuth2 через GitHub](http://rblik-topjava.herokuapp.com)
   - [GitHub, ветка oauth](https://github.com/rblik/topjava/tree/oauth)
 - [Авторизация в приложение по OAuth2 через GitHub/Facebook/Google](http://tj9.herokuapp.com)
