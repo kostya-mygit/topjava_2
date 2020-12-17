@@ -203,7 +203,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
   - 3.1 регистрации / редактирования профиля пользователя
   - 3.2 добавления / редактирования пользователя в таблице
   - 3.3 REST контроллеров
-    - сделать можно или через `catch DataIntegrityViolationException` или через [собственный валидатор и @InitBinder](http://www.mkyong.com/spring-mvc/spring-mvc-form-handling-example).
+    - сделать можно через `catch DataIntegrityViolationException` или (сложнее) через [собственный валидатор и @InitBinder](https://coderlessons.com/articles/java/spring-mvc-validator-i-initbinder).
 
 ### Optional
 - 4: Сделать обработку ошибки при дублирования dateTime еды. Сделать тесты на дублирование email и dateTime.
