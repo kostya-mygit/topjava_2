@@ -197,6 +197,8 @@ Datasources advanced
    - Если проверки или Диплома нет, заполнять не нужно. 
    -  **Возможно доплатить за ревью отдельно из JavaOPs профиля, как за тестовое собеседование: 2450р**
 
+## Пожалуйста <a href="http://goo.gl/forms/PtFcPqEV5n">ответь на 4-6 вопросов по проекту</a>, это важно!
+
 -------------------------
 
 #### Возможные доработки приложения:
@@ -241,5 +243,3 @@ Datasources advanced
 -  <a href="http://java-course.ru/student/book2/">Java Course (книга 2)</a>
 -  <a href="http://design-pattern.ru/">Справочник «Паттерны проектирования»</a>
 -  <a href="http://martinfowler.com/eaaCatalog/">Catalog of Patterns of Enterprise Application Architecture</a>
-
-## Пожалуйста <a href="http://goo.gl/forms/PtFcPqEV5n">ответь на 4-6 вопросов по проекту</a>, это важно!
