@@ -117,6 +117,13 @@
 #### Apply 11_15_heroku.patch
 #### Apply 11_16_small_fix.patch
 
+`hr.bat` запускает внутри 2 процесса - maven (`mvn` и java). Проверьте из консоли, что они будут работать (прописаны в системную переменную `Path`)
+```
+mvn -version 
+java --version
+```
+
+
 > - Добавил зависимости `postgres` в профиль мавена `heroku`
 > - [Поменял настройки `dataSource` для профиля `heroku`](http://stackoverflow.com/questions/10684244/dbcp-validationquery-for-different-databases). 
 При опускании/поднятии приложения в heroku.com портятся коннекты в пуле и необходимо их валидировать. 
