@@ -182,6 +182,7 @@ Datasources advanced
 
 #### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Замечания по резюме:
    -  **если нет опыта в IT, обязательно вставь [участие в стажировке Topjava](https://github.com/JavaOPs/topjava/blob/master/cv.md#Позиционирование-проекта-topjava). Весь не-IT опыт можно кратко.**
+  - **наиболее популярные контакты сейчас это WhatsApp, Skype, Telegram. HR ими пользуется!**
    -  варианты размещения: Pdf в любом облаке, [Google Doc](https://docs.google.com/), LinkedIn, HH,  [еще варианты и рекомендации](https://github.com/JavaOPs/topjava/blob/master/cv.md#составление-резюме)  
 Хорошо, если будет в html или pdf формате (например в https://pages.github.com/). [Например так](https://gkislin.github.io/), [на github](https://github.com/gkislin/gkislin.github.io/blob/master/index.html)
    -  возраст и день рождения можно не писать
