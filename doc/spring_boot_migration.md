@@ -34,6 +34,6 @@ git clone --branch spring-boot --single-branch https://github.com/JavaWebinar/to
 сам [конфигурирует `MockMvc` через `@AutoConfigureMockMvc`](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-testing-spring-boot-applications-testing-with-mock-environment)  
 - Мигрировал все тесты контроллеров. `MealRestControllerTest.updateDuplicate` и `createDuplicate` не получилось сделать красиво, пока в *TODO*.
  В тестовом проекте столько тестов **НЕ ТРЕБУЕТСЯ**, достаточно нескольких на основные юзкейсы.  
-- **Сделал красивый [REST API documentation](http://localhost:8080/swagger-ui/)**. Добавьте в выпускной проект - это будет большим плюсом и избавит от необходимости писать документацию.
+- **Сделал красивый [REST API documentation](http://localhost:8080/swagger-ui/). Добавьте в выпускной проект** - это будет большим плюсом и избавит от необходимости писать документацию.
 Не забудьте ссылку на нее в `readme.md`!  
 - Отсутствует кэширование, которое желательно в выпускном. Добавлю позже и сделаю дополнительную рассылку. 
