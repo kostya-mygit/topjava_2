@@ -1,10 +1,8 @@
 # Онлайн-проекта <a href="https://github.com/JavaWebinar/topjava">TopJava</a>
 
-## [Патчи](https://drive.google.com/drive/u/1/folders/1ct7-CGyD19lT5bnpJHIw49CxrvlnMZb-)
-
 ### ![correction](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 
-#### Apply 12_0_fix.patch
+#### Apply [12_0_fix.patch](https://drive.google.com/file/d/1MJeUN22gRwsBLQ298KIw5l4Gn3Mo3H7l)
 
 > - Fix `@OnDelete`. Требуется только для автогенерации (как делаем на Spring Boot), но т.к мы делаем максимально правильно, сюда тоже внес
 >  - [@ElementCollection + @OnDelete](https://stackoverflow.com/a/62848296/548473)
