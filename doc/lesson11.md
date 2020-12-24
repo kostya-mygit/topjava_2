@@ -116,7 +116,6 @@
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZkpVM19QWFBOQ2c">3. Деплой приложения в Heroku.</a>
 #### Apply 11_15_heroku.patch
 #### Apply 11_16_small_fix.patch
-#### Apply 11_17_fix_style.patch
 
 `hr.bat` запускает внутри 2 процесса - maven (`mvn` и `java`). Проверьте из консоли, что они будут работать (прописаны в системную переменную `Path`). Если запускаетесь из под IDEA и меняете `Path`, не забывайте перегрузиться.
 ```
