@@ -41,4 +41,4 @@ git clone --branch spring-boot --single-branch https://github.com/JavaWebinar/to
 - [Spring Boot With Caffeine Cache](https://www.javadevjournal.com/spring-boot/spring-boot-with-caffeine-cache/)
 - [Profile Specific Files - отключение кэша при тестировании](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config-files-profile-specific)
 
-- Кэширование желательно в выпускном. 7 раз подумайте, что будете кэшировать! (самые частые запросы, которые редко изменяются).
+Кэширование желательно в выпускном. 7 раз подумайте, что будете кэшировать! (самые частые запросы, которые редко изменяются).
