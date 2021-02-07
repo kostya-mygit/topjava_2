@@ -1,7 +1,14 @@
 package ru.javawebinar.topjava.service;
 
+import org.junit.AfterClass;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestRule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.test.context.ContextConfiguration;
@@ -11,8 +18,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import static org.junit.Assert.assertThrows;
 import static ru.javawebinar.topjava.MealTestData.*;
@@ -26,6 +37,32 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 @RunWith(SpringRunner.class)
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
 public class MealServiceTest {
+    private static final Logger log = LoggerFactory.getLogger(MealServiceTest.class);
+    private static Map<String, Long> allTests = new LinkedHashMap<>();
+
+    @Rule
+    public final TestRule watcher = new TestWatcher() {
+        private Instant start = null;
+
+        @Override
+        protected void starting(Description description) {
+            start = Instant.now();
+        }
+
+        @Override
+        protected void finished(Description description) {
+            Instant finish = Instant.now();
+            long duration = Duration.between(start, finish).toMillis();
+            log.info("The test took " + duration + " ms");
+            allTests.put(description.getMethodName(), duration);
+        }
+    };
+
+    @AfterClass
+    public static void afterAll() throws Exception {
+        log.info("== Tests statistics ==");
+        allTests.forEach((k, v) -> log.info("The test " + k + " took " + v + " ms"));
+    }
 
     @Autowired
     private MealService service;
