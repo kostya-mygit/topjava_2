@@ -17,7 +17,7 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 public abstract class MealServiceTest extends ServiceTest {
 
     @Autowired
-    private MealService service;
+    protected MealService service;
 
     @Test
     public void delete() {
@@ -50,7 +50,6 @@ public abstract class MealServiceTest extends ServiceTest {
         assertThrows(DataAccessException.class, () ->
                 service.create(new Meal(null, meal1.getDateTime(), "duplicate", 100), USER_ID));
     }
-
 
     @Test
     public void get() {
