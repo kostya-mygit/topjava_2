@@ -23,6 +23,6 @@ public interface MealRepository {
 
     // null if meal do not belong to userId
     default Meal getWithUser(int id, int userId) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 }

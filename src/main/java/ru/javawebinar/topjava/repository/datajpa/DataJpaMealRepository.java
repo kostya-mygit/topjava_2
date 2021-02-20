@@ -2,8 +2,6 @@ package ru.javawebinar.topjava.repository.datajpa;
 
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.TransactionDefinition;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.repository.MealRepository;
@@ -17,17 +15,14 @@ public class DataJpaMealRepository implements MealRepository {
 
     private final CrudMealRepository crudRepository;
     private final CrudUserRepository crudUserRepository;
-    private final JpaTransactionManager transactionManager;
 
     public DataJpaMealRepository(CrudMealRepository crudRepository, CrudUserRepository crudUserRepository, JpaTransactionManager transactionManager) {
         this.crudRepository = crudRepository;
         this.crudUserRepository = crudUserRepository;
-        this.transactionManager = transactionManager;
-        transactionManager.getTransaction(TransactionDefinition.withDefaults());
     }
 
     @Override
-    @Transactional(propagation = Propagation.MANDATORY)
+    @Transactional
     public Meal save(Meal meal, int userId) {
         if (!meal.isNew() && get(meal.id(), userId) == null) {
             return null;
@@ -37,7 +32,7 @@ public class DataJpaMealRepository implements MealRepository {
     }
 
     @Override
-    @Transactional(propagation = Propagation.MANDATORY)
+    @Transactional
     public boolean delete(int id, int userId) {
         return crudRepository.delete(id, userId) != 0;
     }
